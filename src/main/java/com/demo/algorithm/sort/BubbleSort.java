@@ -8,7 +8,14 @@ package com.demo.algorithm.sort;
  * @since JDK1.8
  */
 public class BubbleSort {
+
+    /**
+     * 排序
+     *
+     * @param n 数组
+     */
     public static int[] sort(int[] n) {
+        Common.enableSort(n);
         int[] array = Common.copyArray(n);
         int times = n.length - 1;
         int num = n.length - 1;

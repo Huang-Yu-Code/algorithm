@@ -6,10 +6,6 @@ package com.demo.algorithm.sort;
  * @author codingob
  */
 public class QuickSort {
-    /**
-     * 数组大小
-     */
-    private final static int SIZE = 2;
 
     /**
      * 排序
@@ -17,10 +13,8 @@ public class QuickSort {
      * @param n 数组
      */
     public static int[] sort(int[] n) {
+        Common.enableSort(n);
         int[] array = Common.copyArray(n);
-        if (array.length < SIZE) {
-            throw new RuntimeException("数组长度不能小于2");
-        }
         int i = 0;
         int l;
         int r;

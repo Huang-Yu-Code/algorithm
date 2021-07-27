@@ -9,7 +9,23 @@ package com.demo.algorithm.sort;
  */
 public class Common {
     /**
+     * 数组最小长度
+     */
+    private final static int LENGTH = 2;
+
+    /**
+     * 是否满足排序条件
+     * @param n 待排序数组
+     */
+    public static void enableSort(int[] n) {
+        if (n.length < LENGTH) {
+            throw new RuntimeException("数组长度不能小于2");
+        }
+    }
+
+    /**
      * 复制数组
+     *
      * @param n 原始数组
      * @return 新的数组
      */
@@ -29,7 +45,7 @@ public class Common {
      * @param b 下标
      */
     public static int[] swap(int[] n, int a, int b) {
-        int[] array= copyArray(n);
+        int[] array = copyArray(n);
         int temp = array[a];
         array[a] = array[b];
         array[b] = temp;
