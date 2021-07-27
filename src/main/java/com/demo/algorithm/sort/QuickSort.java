@@ -16,16 +16,17 @@ public class QuickSort {
      *
      * @param n 数组
      */
-    public static void sort(int[] n) {
-        if (n.length < SIZE) {
+    public static int[] sort(int[] n) {
+        int[] array = Common.copyArray(n);
+        if (array.length < SIZE) {
             throw new RuntimeException("数组长度不能小于2");
         }
         int i = 0;
         int l;
         int r;
         while (true) {
-            r = right(n, i);
-            l = left(n, i);
+            r = right(array, i);
+            l = left(array, i);
             if (r == -1) {
                 i++;
                 if (i > n.length - 1) {
@@ -34,15 +35,16 @@ public class QuickSort {
             } else {
                 if (r > l) {
                     if (l == -1) {
-                        swap(n, r, i);
+                        array = Common.swap(array, r, i);
                     } else {
-                        swap(n, l, r);
+                        array = Common.swap(array, l, r);
                     }
                 } else {
-                    swap(n, r, i);
+                    array = Common.swap(array, r, i);
                 }
             }
         }
+        return array;
     }
 
     /**
@@ -75,18 +77,5 @@ public class QuickSort {
             }
         }
         return -1;
-    }
-
-    /**
-     * 交换数值
-     *
-     * @param n 数组
-     * @param a 下标
-     * @param b 下标
-     */
-    private static void swap(int[] n, int a, int b) {
-        int temp = n[a];
-        n[a] = n[b];
-        n[b] = temp;
     }
 }

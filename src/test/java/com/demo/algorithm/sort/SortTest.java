@@ -13,14 +13,26 @@ import java.util.Arrays;
 public class SortTest {
     @Test
     void quickSort() {
-        int[] a = {2,1,4,4,5,5,8,7};
-        QuickSort.sort(a);
-        log.info(Arrays.toString(a));
+        int[] n = {2, 1, 4, 4, 5, 5, 8, 7};
+        int[] sort = QuickSort.sort(n);
+        int[] result = Common.copyArray(n);
+        Arrays.sort(result);
+        Assertions.assertArrayEquals(result, sort);
+        log.info("原始数组: " + Arrays.toString(n));
+        log.info("验证排序数组: " + Arrays.toString(sort));
+        log.info("正确排序后的数组: " +Arrays.toString(result));
 
-        int[] b = {2,1,4,4,5,5,8,7};
-        Arrays.sort(b);
-        log.info(Arrays.toString(b));
+    }
 
-        Assertions.assertEquals(Arrays.toString(b), Arrays.toString(a));
+    @Test
+    void bubbleSort() {
+        int[] n = {2, 1, 4, 4, 5, 5, 8, 7};
+        int[] sort = BubbleSort.sort(n);
+        int[] result = Common.copyArray(n);
+        Arrays.sort(result);
+        Assertions.assertArrayEquals(result, sort);
+        log.info("原始数组: " + Arrays.toString(n));
+        log.info("验证排序数组: " + Arrays.toString(sort));
+        log.info("正确排序后的数组: " +Arrays.toString(result));
     }
 }
