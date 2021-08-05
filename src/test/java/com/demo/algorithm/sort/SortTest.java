@@ -1,5 +1,8 @@
 package com.demo.algorithm.sort;
 
+import com.github.codingob.algorithm.sort.BubbleSort;
+import com.github.codingob.algorithm.sort.InsertionSort;
+import com.github.codingob.algorithm.sort.QuickSort;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

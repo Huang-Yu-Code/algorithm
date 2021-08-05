@@ -1,4 +1,4 @@
-package com.demo.algorithm.sort;
+package com.github.codingob.algorithm.sort;
 
 /**
  * 插入排序

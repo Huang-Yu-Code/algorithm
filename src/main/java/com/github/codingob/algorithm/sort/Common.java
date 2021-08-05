@@ -1,4 +1,4 @@
-package com.demo.algorithm.sort;
+package com.github.codingob.algorithm.sort;
 
 /**
  * 公用类
