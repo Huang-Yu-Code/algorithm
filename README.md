@@ -6,6 +6,6 @@
 
 ### [冒泡排序](./src/main/java/com/demo/algorithm/sort/BubbleSort.java)
 
-### 插入排序
+### [插入排序](./src/main/java/com/demo/algorithm/sort/InsertionSort.java)
 
 ### 归并排序
