@@ -16,13 +16,14 @@ public class BubbleSort {
      */
     public static int[] sort(int[] n) {
         Common.enableSort(n);
-        int[] array = Common.copyArray(n);
+        int[] array = new int[n.length];
+        System.arraycopy(n, 0, array, 0, n.length);
         int times = n.length - 1;
         int num = n.length - 1;
         while (times > 0) {
             for (int i = 0; i < num; i++) {
                 if (array[i] > array[i + 1]) {
-                    array = Common.swap(array, i, i + 1);
+                    Common.swap(array, i, i + 1);
                 }
             }
             times--;

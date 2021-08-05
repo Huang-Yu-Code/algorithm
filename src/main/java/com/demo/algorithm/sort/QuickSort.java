@@ -14,7 +14,8 @@ public class QuickSort {
      */
     public static int[] sort(int[] n) {
         Common.enableSort(n);
-        int[] array = Common.copyArray(n);
+        int[] array = new int[n.length];
+        System.arraycopy(n, 0, array, 0, n.length);
         int i = 0;
         int l;
         int r;
@@ -29,12 +30,12 @@ public class QuickSort {
             } else {
                 if (r > l) {
                     if (l == -1) {
-                        array = Common.swap(array, r, i);
+                        Common.swap(array, r, i);
                     } else {
-                        array = Common.swap(array, l, r);
+                        Common.swap(array, l, r);
                     }
                 } else {
-                    array = Common.swap(array, r, i);
+                    Common.swap(array, r, i);
                 }
             }
         }
